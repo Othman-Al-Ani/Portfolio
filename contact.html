@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio</title>
+</head>
+
+<body>
+	<div class="align">
+
+<div class="Title"> 
+
+<a href="index.html" class="hotbar"> <div > <h2 >  Home </h2>  </div> </a>
+
+
+	<a class="hotbar" href="projects.html"> <div> <h2 > Projects  </h2>  </div> </a>
+
+
+	<div class="hotbar"> <h1>  Contact me  </h1> </div>
+
+</div>
+
+ <button class="switch button-style" onclick="myFunction()">Dark mode</button>
+
+
+</div>
+
+<div class="align">
+
+	<div class="sideBar" >
+
+		<div id="cen">
+		  <h1>Contact Me</h1>
+   			
+ 		  <h3>Email:<a href="mailto:othman2003alani@gmail.com">othman2003alani@gmail.comm</a> </h3>
+
+ 		  <h3>Phone: xxxxxxx </h3>
+ 		  <h3> Socials ----> </h3>
+   
+		
+		</div>
+
+
+
+	</div>
+
+
+	<div class="main" id="lilmarg"> 
+
+		<h2 id="right"> Socials</h2>
+
+		<div class="align">
+		
+			 <a href="" class="mini"> <div > <img src="insta.png" class="icon"> </div> </a>
+
+
+			<a href="" class="mini"> <div > <img src="" class="icon"> </div> </a>
+
+		
+			<a href="" class="mini"> <div > <img src="linkedin.png" class="icon"> </div> </a>
+
+		</div>
+
+		<div class="align">
+		
+			 <a href="index." class="mini"> <div > <img src="flower.jpg" class="icon"> </div> </a>
+
+
+			<a href="index." class="mini"> <div > <img src="" class="icon"> </div> </a>
+
+		
+			<a href="index." class="mini"> <div > <img src="" class="icon"> </div> </a>
+
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+</div>
+
+
+
+<script>
+let isGradient = false;
+
+function myFunction() {
+    var elements = document.querySelectorAll('.Title, .box, .main, .sideBox, .sideBar');
+    var button = document.querySelector('.switch');
+
+    const body = document.body;
+    
+    if (isGradient) {
+         body.style.background = 'linear-gradient(180deg, rgba(109, 167, 212, 1) 0%, rgba(53, 106, 167, 1) 25%, rgba(26, 51, 82, 1) 50%, rgba(53, 106, 167, 1) 75%, rgba(109, 167, 212, 1) 100%)';
+        
+        elements.forEach(element => {
+            element.classList.toggle("dark-mode");
+        });
+        button.textContent = 'Dark mode';
+         button.classList.remove("button-dark");
+
+    } else {
+        body.style.background = 'linear-gradient(180deg, rgba(124,52,127,1) 0%, rgba(78,44,79,1) 25%, rgba(49,20,50,1) 50%, rgba(0,0,0,1) 78%, rgba(124,52,127,1) 100%)';
+        
+        elements.forEach(element => {
+            element.classList.toggle("dark-mode");
+        });
+        button.textContent = 'Light mode';
+
+      
+            button.classList.add("button-dark");
+    }
+    
+    isGradient = !isGradient;
+
+    
+
+}
+</script>
+</body>
+</html>

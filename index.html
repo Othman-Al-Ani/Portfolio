@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio</title>
+</head>
+<body>
+
+
+
+<div class="align">
+
+	<div class="Title"> 
+
+
+	<div class="hotbar"> <h1>  Home  </h1> </div>
+
+
+	<a class="hotbar" href="projects.html"> <div> <h2 > Projects  </h2>  </div> </a>
+
+	<a class="hotbar" href="contact.html"> <div> <h2 >  Contact me  </h2>  </div> </a>
+
+	</div>
+
+	
+
+    <button class="switch button-style" onclick="myFunction()">Dark mode</button>
+
+
+</div>
+
+
+
+ <div class="box" id="left"> 
+	 
+	<div class="txt">
+		<h3 >Othman Al-Ani</h3>
+
+		<p>
+			
+			I am Othman Al-Ani, a recent graduate with a distinguished academic journey from the Technological High School NTI Helsingborg. This pivotal phase has nurtured a strong foundation in technology and innovation, enriching my capabilities significantly.
+			
+		</p>
+
+		
+		<p>
+			
+		My professional profile is further enriched by my engagement in the student council, where I spearheaded projects both within my school and neighboring institutions. While my work experience might be limited, my strength lies in my exceptional communication skills. I possess the ability to effectively connect with diverse audiences, whether they are clients or colleagues.
+		</p>
+
+		
+		<p>
+			My skill set excels in adapting to dynamic environments, deftly resolving challenges, and fostering harmonious workspaces through adept conflict resolution. I take pride in my accountability and finesse in task delegation, ensuring the accomplishment of collective goals.
+
+		
+		</p>
+
+
+
+	</div>
+
+	<img src="Sass.jpg" class="pic">
+
+
+ </div>
+
+ <div class="box" id="right"> 
+	
+	<img src="leaf.jpg" class="pic">
+
+	<div class="txt">
+
+		<h3 >About me</h3>
+
+		<p>In my freetime, I enjoy immersing myself in video games, challenging myself and connecting with friends. I'm also a passionate reader, delving into diverse literary worlds, from thrilling adventures to classic wisdom. Additionally, rugby captivates me, epitomizing teamwork, resilience, and personal growth. This dynamic mix of interests shapes my character and fuels my pursuit of innovative engineering, where I aim to leave a positive impact on the world.</p>
+
+		<p> Looking ahead, I'm excited about the prospect of a career in engineering, particularly in software and product development. I'm fascinated by the idea of creating technologies that can make a positive impact on people's lives. Whether it's developing innovative software or designing products that solve real-world problems, I'm eager to contribute to advancements that shape our future.</p>
+	</div>
+
+
+ </div>
+
+
+
+
+
+
+
+<script>
+let isGradient = false;
+
+function myFunction() {
+    var elements = document.querySelectorAll('.Title, .box, .main, .sideBox, sideBar');
+    var button = document.querySelector('.switch');
+
+    const body = document.body;
+    
+    if (isGradient) {
+         body.style.background = 'linear-gradient(180deg, rgba(109, 167, 212, 1) 0%, rgba(53, 106, 167, 1) 25%, rgba(26, 51, 82, 1) 50%, rgba(53, 106, 167, 1) 75%, rgba(109, 167, 212, 1) 100%)';
+        
+        elements.forEach(element => {
+            element.classList.toggle("dark-mode");
+        });
+        button.textContent = 'Dark mode';
+         button.classList.remove("button-dark");
+
+    } else {
+        body.style.background = 'linear-gradient(180deg, rgba(124,52,127,1) 0%, rgba(78,44,79,1) 25%, rgba(49,20,50,1) 50%, rgba(0,0,0,1) 78%, rgba(124,52,127,1) 100%)';
+        
+        elements.forEach(element => {
+            element.classList.toggle("dark-mode");
+        });
+        button.textContent = 'Light mode';
+
+      
+            button.classList.add("button-dark");
+    }
+    
+    isGradient = !isGradient;
+
+    
+
+}
+</script>
+
+
+</body>
+</html>
